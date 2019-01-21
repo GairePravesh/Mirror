@@ -34,7 +34,13 @@ class News(tk.Frame):
     def __init__(self, parent):
         tk.Frame.__init__(self, parent, bg="#000")
         self.headlines = tk.Label(self, text="Hello World Today is Wednesday.\nThis is special but needs more to do.\nNew Headline is github is free.\nToday is the day when she was born.", font=("Helvetica", H3), fg="white", bg="black")
-        self.headlines.pack(side=tk.BOTTOM, anchor=tk.CENTER)
+        self.headlines.pack(anchor=tk.CENTER)
+
+class Quote(tk.Frame):
+    def __init__(self, parent):
+        tk.Frame.__init__(self, parent, bg="#000")
+        self.quoteofday = tk.Label(self, text='"  Passion often gets suppressed beneath the responsibilites!  "', font=("Helvetica", H3), fg="white", bg="black")
+        self.quoteofday.pack(anchor=tk.CENTER)
 
 
 class Application(tk.Frame):
@@ -68,9 +74,11 @@ class Application(tk.Frame):
         self.master.unbind('<Return>')
 
         topframe = tk.Frame(self.master, bg="#000")
-        topframe.pack(side=tk.TOP, fill=tk.BOTH, expand=tk.YES)
+        topframe.pack(fill=tk.BOTH, expand=tk.YES)
+        midframe = tk.Frame(self.master, bg="#000")
+        midframe.pack(fill=tk.BOTH, expand=tk.YES)
         bottomframe = tk.Frame(self.master, bg="#000")
-        bottomframe.pack(side=tk.BOTTOM, fill=tk.BOTH, expand=tk.YES)
+        bottomframe.pack(fill=tk.BOTH, expand=tk.YES)
 
         weatherframe = Weather(topframe)
         weatherframe.pack(side=tk.LEFT, padx=100, pady=60, anchor=tk.N)
@@ -79,7 +87,10 @@ class Application(tk.Frame):
         clockframe.pack(side=tk.RIGHT, padx=100, pady=60, anchor=tk.N)
 
         newsframe = News(bottomframe)
-        newsframe.pack(anchor=tk.S)
+        newsframe.pack()
+
+        quoteframe = Quote(midframe)
+        quoteframe.pack()
 
     def CleanAll(self, Parent):
         listofchilds = Parent.winfo_children()
