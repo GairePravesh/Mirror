@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Magic Mirror</title>
+    <link rel="stylesheet" href="res/vendors/calendar/jsCalendar.css">
+    <script src="res/vendors/calendar/jsCalendar.js"></script>
+  </head>
+  <body>
+    <div class="date-time">
+      <span class="dt"></span>
+    </div>
+    <div class="weather">
+      <span class="weath"></span>
+    </div>
+    <div class="reminder">
+      
+    </div>
+    <div class="quotes">
+      <span class="quot"></span>
+    </div>
+    <div id="my-calendar">
+      <div class="auto-jsCalendar">
+      </div>
+    </div>
+    <div class="left news">
+
+    </div>
+    <div class="right tweets">
+
+    </div>
+    <script>
+      // You can also require other files to run in this process
+      window.$ = window.jQuery = require('jquery')
+      require('./renderer.js')
+    </script>
+  </body>
+</html>
