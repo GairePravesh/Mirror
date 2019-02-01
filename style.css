@@ -1,3 +1,7 @@
+html, body{
+  background-color: #000;
+  color:white;
+}
 .big-font{
   font-size: 48px;
 }
@@ -5,12 +9,13 @@
   font-size: 20px;
 }
 .small-font{
-  font-size: 18px;
+  font-size: 16px;
 }
 
 p{
   margin:0;
-  padding: 0;
+  padding: 5px;
+  letter-spacing: 3px;
 }
 
 .top-frame{
@@ -33,7 +38,7 @@ p{
 }
 .mid-left{
   float:left;
-  width:300px;
+  width:400px;
 }
 .mid-right{
   width:300px;
@@ -43,5 +48,13 @@ p{
 .quotes{
   position: absolute;
   bottom: 0px;
-  padding: 40px;
+  left: 0;
+  width: 100%;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.warning{
+  color:red;
+  text-align: center;
 }

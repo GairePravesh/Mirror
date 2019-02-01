@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="UTF-8">
+  <title>Magic Mirror</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="res/vendors/calendar/jsCalendar.css">
+  <script src="res/vendors/calendar/jsCalendar.js"></script>
+</head>
 <body>
-Offline
-<script>
-  const { ipcRenderer } = require('electron')
-  const updateOnlineStatus = () => {
-    ipcRenderer.send('online-status-changed', navigator.onLine)
-  }
-
-  window.addEventListener('online',  updateOnlineStatus)
-  window.addEventListener('offline',  updateOnlineStatus)
-
-  updateOnlineStatus()
-</script>
+  <div class="top-frame">
+    <div class="top-left">
+      <div class="date-time">
+        <canvas id="canvas" width="150" height="150">
+        </canvas>
+        <p class="dt"></p>
+      </div>
+    </div>
+    <div class="top-right">
+      <div id="my-calendar">
+        <div class="auto-jsCalendar">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="warning">
+    <p class="mid-font">No Internet Connection!</p>
+  </div>
+  <script src="common.js"></script>
 </body>
 </html>

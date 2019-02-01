@@ -11,7 +11,9 @@
     <div class="top-frame">
       <div class="top-left">
         <div class="date-time">
-          <span class="dt"></span>
+          <canvas id="canvas" width="150" height="150">
+          </canvas>
+          <p class="dt"></p>
         </div>
         <hr>
         <div class="weather">
@@ -42,9 +44,9 @@
     <div class="quotes">
       <span class="quot"></span>
     </div>
+    <script src="common.js"></script>
     <script>
       // You can also require other files to run in this process
-      window.$ = window.jQuery = require('jquery')
       require('./renderer.js')
     </script>
   </body>
