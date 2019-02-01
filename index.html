@@ -3,31 +3,44 @@
   <head>
     <meta charset="UTF-8">
     <title>Magic Mirror</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="res/vendors/calendar/jsCalendar.css">
     <script src="res/vendors/calendar/jsCalendar.js"></script>
   </head>
   <body>
-    <div class="date-time">
-      <span class="dt"></span>
+    <div class="top-frame">
+      <div class="top-left">
+        <div class="date-time">
+          <span class="dt"></span>
+        </div>
+        <hr>
+        <div class="weather">
+          <span class="weath"></span>
+        </div>
+      </div>
+      <div class="top-right">
+        <div id="my-calendar">
+          <div class="auto-jsCalendar">
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="weather">
-      <span class="weath"></span>
-    </div>
-    <div class="reminder">
-      
+    <div class="mid-frame">
+      <div class="mid-left">
+        <div class="news">
+          <p class="mid-font">News Headlines:</p>
+          <span class="nes"></span>
+        </div>
+      </div>
+      <div class="mid-right">
+        <div class="events">
+          <p class="mid-font">Upcoming Events:</p>
+          <span class="evt"></span>
+        </div>
+      </div>
     </div>
     <div class="quotes">
       <span class="quot"></span>
-    </div>
-    <div id="my-calendar">
-      <div class="auto-jsCalendar">
-      </div>
-    </div>
-    <div class="left news">
-
-    </div>
-    <div class="right tweets">
-
     </div>
     <script>
       // You can also require other files to run in this process

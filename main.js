@@ -1,26 +1,43 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, ipcMain} = require('electron')
 const path = require('path')
 
 require('electron-reload')(__dirname, {
   electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
 });
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
-
+let online
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow()
   mainWindow.maximize()
   mainWindow.setMenu(null)
-  mainWindow.webContents.openDevTools()
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
 
+  ipcMain.on('online-status-changed', (event, status) => {
+    // console.log(online, status)
+    if(online != status){
+      // console.log("status changed")
+    //   console.log(status)
+      if(status){
+        // console.log(status)
+        mainWindow.loadFile('index.html')
+      }
+      else{
+        // console.log(status)
+         mainWindow.loadFile('offline.html')
+      }
+    }
+    online = status
+  })
+
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {

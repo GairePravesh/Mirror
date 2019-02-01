@@ -1,0 +1,47 @@
+.big-font{
+  font-size: 48px;
+}
+.mid-font{
+  font-size: 20px;
+}
+.small-font{
+  font-size: 18px;
+}
+
+p{
+  margin:0;
+  padding: 0;
+}
+
+.top-frame{
+  overflow: auto;
+  clear: both;
+  padding: 20px 40px;
+}
+.top-left{
+  float:left;
+}
+.top-right{
+  float:right;
+  width:300px;
+}
+
+.mid-frame{
+  overflow: auto;
+  clear: both;
+  padding: 20px 40px;
+}
+.mid-left{
+  float:left;
+  width:300px;
+}
+.mid-right{
+  width:300px;
+  float: right;
+}
+
+.quotes{
+  position: absolute;
+  bottom: 0px;
+  padding: 40px;
+}
