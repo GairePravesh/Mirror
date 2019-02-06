@@ -14,7 +14,7 @@ let mainWindow
 let online
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow()
+  mainWindow = new BrowserWindow({frame:false})
   mainWindow.maximize()
   mainWindow.setMenu(null)
 

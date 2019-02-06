@@ -1,0 +1,32 @@
+
+> electron-quick-start@1.0.0 start /home/pi/Mirror
+> electron .
+
+sh: 1: electron: not found
+npm ERR! file sh
+npm ERR! code ELIFECYCLE
+npm ERR! errno ENOENT
+npm ERR! syscall spawn
+npm ERR! electron-quick-start@1.0.0 start: `electron .`
+npm ERR! spawn ENOENT
+npm ERR! 
+npm ERR! Failed at the electron-quick-start@1.0.0 start script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/pi/.npm/_logs/2019-02-06T16_17_24_783Z-debug.log
+
+> electron-quick-start@1.0.0 start /home/pi/Mirror
+> electron .
+
+/home/pi/Mirror/node_modules/electron/dist/electron: /lib/arm-linux-gnueabihf/libc.so.6: version `GLIBC_2.27' not found (required by /home/pi/Mirror/node_modules/electron/dist/electron)
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! electron-quick-start@1.0.0 start: `electron .`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the electron-quick-start@1.0.0 start script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/pi/.npm/_logs/2019-02-06T16_20_35_554Z-debug.log
