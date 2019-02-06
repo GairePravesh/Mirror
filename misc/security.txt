@@ -1,0 +1,8 @@
+security profile id
+"amzn1.application.cdde425e90934c6cafc46824bfdc9d79"
+
+client id
+amzn1.application-oa2-client.aa68d233779a4174860950f79d1cec39
+
+client secret
+3d82cbc8b05395ec21bb3f6673d50b9a9361bb32ef73161f35faf562d8712e61
